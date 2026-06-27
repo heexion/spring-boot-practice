@@ -19,6 +19,10 @@ public class Member {
 
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
+
     public Member(String loginId, String password, String name) {
         this.loginId = loginId;
         this.password = password;
